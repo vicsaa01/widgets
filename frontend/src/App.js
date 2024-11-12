@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 
 import Home from './pages/Home'
 import Calculator from './pages/Calculator'
+import Time from './pages/Time'
 import Weather from './pages/Weather'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route path="/calculator" element={<Calculator/>}/>
+        <Route path="/time" element={<Time/>}/>
         <Route path="/weather" element={<Weather/>}/>
       </Routes>
       <Footer/>
