@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Home = () => {
+const Time = () => {
 
     return(
         <main class="d-flex flex-col">
-            <p>Home</p>
+            <p>Time</p>
             
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </main>
     )
 }
 
-export default Home
+export default Time

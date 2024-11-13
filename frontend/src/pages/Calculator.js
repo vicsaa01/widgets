@@ -3,7 +3,11 @@ import React from 'react'
 const Calculator = () => {
 
     return(
-        <div>Calculator</div>
+        <main class="d-flex flex-col">
+            <p>Calculator</p>
+            
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </main>
     )
 }
 
