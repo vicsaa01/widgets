@@ -1,0 +1,18 @@
+nav {
+    background-color: rgb(0, 162, 232);
+}
+
+.nav-button {
+    border-style: solid;
+    border-color: white;
+    color: white;
+  }
+
+.nav-button:hover {
+    color: rgb(0, 162, 232);
+    background-color: white;
+}
+
+footer {
+    background-color: rgb(0, 162, 232);
+}

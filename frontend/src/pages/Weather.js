@@ -3,7 +3,11 @@ import React from 'react'
 const Weather = () => {
 
     return(
-        <div>Weather</div>
+        <main class="d-flex flex-col">
+            <p>Weather</p>
+            
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </main>
     )
 }
 

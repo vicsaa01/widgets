@@ -3,7 +3,11 @@ import React from 'react'
 const Time = () => {
 
     return(
-        <div>Time</div>
+        <main class="d-flex flex-col">
+            <p>Time</p>
+            
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </main>
     )
 }
 

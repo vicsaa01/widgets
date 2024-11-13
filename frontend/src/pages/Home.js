@@ -3,7 +3,11 @@ import React from 'react'
 const Home = () => {
 
     return(
-        <div>Home</div>
+        <main class="d-flex flex-col">
+            <p>Home</p>
+            
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </main>
     )
 }
 
