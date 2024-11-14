@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Home = () => {
+const Notes = () => {
 
     return(
         <main class="d-flex flex-col">
-            <p>Home</p>
+            <p>Notes</p>
             
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </main>
     )
 }
 
-export default Home
+export default Notes

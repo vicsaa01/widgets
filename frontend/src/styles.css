@@ -1,4 +1,6 @@
-nav {
+/* Navbar, Footer */
+
+nav, footer {
     background-color: rgb(0, 162, 232);
 }
 
@@ -13,6 +15,22 @@ nav {
     background-color: white;
 }
 
-footer {
-    background-color: rgb(0, 162, 232);
+/* All pages: page size */
+
+.large-page {
+    height: 1080px;
+}
+
+.medium-page {
+    height: 720px;
+}
+
+.small-page {
+    height: 480px;
+}
+
+/* Home */
+
+.widget-button {
+    height: 250px;
 }
