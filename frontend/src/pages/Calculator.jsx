@@ -6,9 +6,9 @@ const Calculator = () => {
 
     return(
         <main class="d-flex">
-            <div class="col-lg-2 col-md-1"></div>
+            <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
 
-            <div class="col-lg-8 col-md-10 large-page">
+            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 large-page">
                 <div class="row w-100 mt-5 mb-5">
                     <h3 class="text-dark text-center">Calculator</h3>
                 </div>
@@ -25,15 +25,15 @@ const Calculator = () => {
                         <CalculatorRow contents={["4", "5", "6", "*", "/"]}/>
                         <CalculatorRow contents={["1", "2", "3", "+", "-"]}/>
                         <CalculatorRow contents={["0", ".", "000", "Ans", "="]}/>
-                        <br/>
-                        <CalculatorRow contents={["(", ")", "%", "^", "sqrt"]}/>
+                        {/* <br/>
+                        <CalculatorRow contents={["(", ")", "%", "^", "sqrt"]}/> */}
                     </div>
 
                     <div class="col-3"></div>
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-1"></div>
+            <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
         </main>
     )
 }

@@ -4,7 +4,7 @@ const CalcNumButton = (props) => {
 
     return(
         <div class="col p-0 pe-2">
-            <a class="btn w-100 border border-dark">{props.number}</a>
+            <a class="btn w-100 border border-dark num-button">{props.number}</a>
         </div>
     )
 }
