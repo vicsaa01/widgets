@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import CalculatorRow from '../components/CalculatorRow'
 
 const Calculator = () => {
+
+    // State management
+
+    var [text, setText] = useState('')
+    var [result, setResult] = useState([])
+
+    // Prevent pasting
+
+    const handlePaste = (e) => {
+        e.preventDefault()
+    }
+
+    // Handle typing
+
+    const handleInputChange = (e) => {
+        const {name, value} = e.target
+        setText(value)
+    }
+
+    const handleOperation = (e) => {
+        if (e.keyCode === 13) {
+            e.preventDefault()
+            // parse text and operate
+            var terms = text.split(/[+\-*/]/)
+            setResult(terms[0])
+            setText('')
+        }
+    }
 
     return(
         <main class="d-flex">
@@ -14,7 +42,9 @@ const Calculator = () => {
                 </div>
 
                 <div class="row w-100 mt-5 mb-5 justify-content-center">
-                    <textarea class="w-50 form-control border border-dark"></textarea>
+                    <textarea class="w-50 form-control border border-dark" id="textarea" name="textarea" value={text}
+                        onChange={handleInputChange} onKeyDown={handleOperation} onPaste={handlePaste}>
+                    </textarea>
                 </div>
 
                 <div class="row w-100 mt-5 mb-5">
@@ -25,8 +55,13 @@ const Calculator = () => {
                         <CalculatorRow contents={["4", "5", "6", "*", "/"]}/>
                         <CalculatorRow contents={["1", "2", "3", "+", "-"]}/>
                         <CalculatorRow contents={["0", ".", "000", "Ans", "="]}/>
+
                         {/* <br/>
                         <CalculatorRow contents={["(", ")", "%", "^", "sqrt"]}/> */}
+
+                        <br/><br/><br/>
+                        <p>Result:</p>
+                        <p>{result}</p>
                     </div>
 
                     <div class="col-3"></div>
