@@ -26,37 +26,67 @@ const Calculator = () => {
         if (e.keyCode === 13) {
             e.preventDefault()
 
-            // Get terms
-            var terms = text.split(/[+\-*/]/)
+            // Get terms (+-)
+            var terms = text.split(/[+\-]/)
 
-            // Get operations
+            // Get operations (+-)
             var ops = []
             for (let i=0; i<text.length; i++) {
-                let character =  text[i]
-                if (character === '+' || character === '-' || character === '*' || character === '/') {
-                    ops.push(text[i])
+                let character = text[i]
+                if (character === '+' || character === '-') {
+                    ops.push(character)
                 }
             }
 
-            // Error checking
+            // Error checking (+-)
             // check (>0?) and compare (>|<) terms.length, ops.length
+            // check not ending with op
 
-            // Initialize res
-            if (terms[0] === '') {
-                var res = 0
-            } else {
-                var res = parseInt(terms[0])
-            }
+            console.log('Terms: ' + terms)
+            console.log('Operations: ' + ops)
 
-            // Calculate the rest
+            // Calculate (+-)
+            var res = 0
             for (let i=0; i<terms.length; i++) {
-                switch(ops[i]) {
-                    case '+':
-                        res += parseInt(terms[i+1])
-                        break;
-                    case '-':
-                        res -= parseInt(terms[i+1])
-                        break;
+
+                // Get terms (*/)
+                let subterms = terms[i].split(/[*\/]/)
+
+                // Get operations (*/)
+                let subops = []
+                for (let j=0; j<terms[i].length; j++) {
+                    let character = terms[i][j]
+                    if (character === '*' || character === '/') {
+                        subops.push(character)
+                    }
+                }
+
+                // Error checking (*/)
+
+                console.log('Subterms (term ' + i + '): ' + subterms)
+                console.log('Suboperations (term ' + i + '): ' + subops)
+
+                // Calculate (*/) ERROR
+                let subres = 1
+                for (let j=0; j<subterms.length; j++) {
+                    if (subops[j-1] === '*') {
+                        subres *= parseInt(subterms[j])
+                    } else if (subops[j-1] === '/') {
+                        subres /= parseInt(subterms[j])
+                    } else {
+                        subres = parseInt(subterms[j])
+                    }
+                }
+
+                console.log('Subresult (term ' + i + '): ' + subres)
+
+                // Add or substract
+                if (ops[i-1] === '+') {
+                    res += parseInt(subres)
+                } else if (ops[i-1] === '-') {
+                    res -= parseInt(subres)
+                } else {
+                    res = parseInt(subres)
                 }
             }
 
