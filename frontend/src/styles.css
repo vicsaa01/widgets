@@ -34,3 +34,21 @@ nav, footer {
 .widget-button {
     height: 250px;
 }
+
+/* Calculator */
+
+.num-button, .num-button:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.op-button, .op-button:hover {
+    background-color: rgb(158, 158, 158);
+}
+
+.c-button, .c-button:hover {
+    background-color: rgb(0, 162, 232);
+}
+
+.eq-button, .eq-button:hover {
+    background-color: lightblue;
+}
