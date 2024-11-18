@@ -25,9 +25,42 @@ const Calculator = () => {
     const handleOperation = (e) => {
         if (e.keyCode === 13) {
             e.preventDefault()
-            // parse text and operate
+
+            // Get terms
             var terms = text.split(/[+\-*/]/)
-            setResult(terms[0])
+
+            // Get operations
+            var ops = []
+            for (let i=0; i<text.length; i++) {
+                let character =  text[i]
+                if (character === '+' || character === '-' || character === '*' || character === '/') {
+                    ops.push(text[i])
+                }
+            }
+
+            // Error checking
+            // check (>0?) and compare (>|<) terms.length, ops.length
+
+            // Initialize res
+            if (terms[0] === '') {
+                var res = 0
+            } else {
+                var res = parseInt(terms[0])
+            }
+
+            // Calculate the rest
+            for (let i=0; i<terms.length; i++) {
+                switch(ops[i]) {
+                    case '+':
+                        res += parseInt(terms[i+1])
+                        break;
+                    case '-':
+                        res -= parseInt(terms[i+1])
+                        break;
+                }
+            }
+
+            setResult(res)
             setText('')
         }
     }
