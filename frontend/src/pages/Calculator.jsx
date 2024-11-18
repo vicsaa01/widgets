@@ -26,6 +26,8 @@ const Calculator = () => {
         if (e.keyCode === 13) {
             e.preventDefault()
 
+            console.log('----- NEW OPERATION -----')
+
             // Get terms (+-)
             var terms = text.split(/[+\-]/)
 
@@ -70,11 +72,11 @@ const Calculator = () => {
                 let subres = 1
                 for (let j=0; j<subterms.length; j++) {
                     if (subops[j-1] === '*') {
-                        subres *= parseInt(subterms[j])
+                        subres *= parseFloat(subterms[j])
                     } else if (subops[j-1] === '/') {
-                        subres /= parseInt(subterms[j])
+                        subres /= parseFloat(subterms[j])
                     } else {
-                        subres = parseInt(subterms[j])
+                        subres = parseFloat(subterms[j])
                     }
                 }
 
@@ -82,13 +84,15 @@ const Calculator = () => {
 
                 // Add or substract
                 if (ops[i-1] === '+') {
-                    res += parseInt(subres)
+                    res += parseFloat(subres)
                 } else if (ops[i-1] === '-') {
-                    res -= parseInt(subres)
+                    res -= parseFloat(subres)
                 } else {
-                    res = parseInt(subres)
+                    res = parseFloat(subres)
                 }
             }
+
+            console.log('Result: ' + res)
 
             setResult(res)
             setText('')
