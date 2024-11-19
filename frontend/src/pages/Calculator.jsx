@@ -162,7 +162,8 @@ const Calculator = () => {
                     <div class="col-3"></div>
 
                     <div class="col-6 p-0">
-                        <p class="w-100 mb-5 text-end">Ans = {result}</p>
+                        {result != '' && <p class="w-100 mb-5 text-end">Ans = {result}</p>}
+                        {result == '' && <><br/><br/><br/></>}
 
                         <CalculatorRow contents={["7", "8", "9", "DEL", "AC"]} setter={handleClick}/>
                         <CalculatorRow contents={["4", "5", "6", "*", "/"]} setter={handleClick}/>
