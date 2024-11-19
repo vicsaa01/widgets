@@ -41,8 +41,21 @@ const Calculator = () => {
             }
 
             // Error checking (+-)
-            // check (>0?) and compare (>|<) terms.length, ops.length
-            // check not ending with op
+            if (ops.length == 0 && text.length == 0) {
+                setResult(0)
+                return
+            }
+            let last_character = text[text.length-1]
+            if (last_character === '+' || last_character === '-' || last_character === '*' || last_character === '/') {
+                setResult('SYNTAX ERROR: You can not end the operation with an operation symbol (+-*/)')
+                return
+            }
+            for (let i=0; i<terms.length; i++) {
+                if (terms[i] === '') {
+                    setResult('SYNTAX ERROR: You can not write more than 1 consecutive op symbol (+-*/)')
+                    return
+                }
+            }
 
             console.log('Terms: ' + terms)
             console.log('Operations: ' + ops)
@@ -64,6 +77,12 @@ const Calculator = () => {
                 }
 
                 // Error checking (*/)
+                for (let j=0; j<subterms.length; j++) {
+                    if (subterms[j] === '') {
+                        setResult('SYNTAX ERROR: You can not write more than 1 consecutive op symbol (+-*/)')
+                        return
+                    }
+                }
 
                 console.log('Subterms (term ' + i + '): ' + subterms)
                 console.log('Suboperations (term ' + i + '): ' + subops)
