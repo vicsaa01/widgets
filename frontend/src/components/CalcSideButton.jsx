@@ -10,7 +10,7 @@ const CalcSideButton = (props) => {
 
     return(
         <div class="col p-0 ps-2">
-            <a class={"btn w-100 border border-dark " + cssClass}>{props.operation}</a>
+            <a class={"btn w-100 border border-dark " + cssClass} onClick={(e) => props.setter(e.target.innerHTML)}>{props.operation}</a>
         </div>
     )
 }

@@ -7,7 +7,7 @@ const Calculator = () => {
     // State management
 
     var [text, setText] = useState('')
-    var [result, setResult] = useState([])
+    var [result, setResult] = useState('')
 
     // Prevent pasting
 
@@ -22,10 +22,34 @@ const Calculator = () => {
         setText(value)
     }
 
-    const handleOperation = (e) => {
+    const handleEnter = (e) => {
         if (e.keyCode === 13) {
             e.preventDefault()
+            calculate()
+        }
+    }
 
+    // Handle clicking
+
+    const handleClick = (x) => {
+        switch(x) {
+            case 'DEL':
+                setText((prevText) => (prevText.substring(0, prevText.length-1)))
+                break;
+            case 'AC':
+                setText('')
+                break;
+            case '=':
+                calculate()
+                break;
+            default:
+                setText((prevText) => (prevText + x))
+        }
+    }
+
+    // Calculator algorithm
+
+    function calculate() {
             console.log('----- NEW OPERATION -----')
 
             // Get terms (+-)
@@ -76,11 +100,13 @@ const Calculator = () => {
                     }
                 }
 
-                // Error checking (*/)
+                // Error checking (*/) and Ans setting
                 for (let j=0; j<subterms.length; j++) {
                     if (subterms[j] === '') {
                         setResult('SYNTAX ERROR: You can not write more than 1 consecutive op symbol (+-*/)')
                         return
+                    } else if (subterms[j] === 'Ans' || subterms[j] === 'ans') {
+                        subterms[j] = result
                     }
                 }
 
@@ -115,7 +141,6 @@ const Calculator = () => {
 
             setResult(res)
             setText('')
-        }
     }
 
     return(
@@ -129,7 +154,7 @@ const Calculator = () => {
 
                 <div class="row w-100 mt-5 mb-5 justify-content-center">
                     <textarea class="w-50 form-control border border-dark" id="textarea" name="textarea" value={text}
-                        onChange={handleInputChange} onKeyDown={handleOperation} onPaste={handlePaste}>
+                        onChange={handleInputChange} onKeyDown={handleEnter} onPaste={handlePaste}>
                     </textarea>
                 </div>
 
@@ -137,10 +162,10 @@ const Calculator = () => {
                     <div class="col-3"></div>
 
                     <div class="col-6 p-0">
-                        <CalculatorRow contents={["7", "8", "9", "DEL", "AC"]}/>
-                        <CalculatorRow contents={["4", "5", "6", "*", "/"]}/>
-                        <CalculatorRow contents={["1", "2", "3", "+", "-"]}/>
-                        <CalculatorRow contents={["0", ".", "000", "Ans", "="]}/>
+                        <CalculatorRow contents={["7", "8", "9", "DEL", "AC"]} setter={handleClick}/>
+                        <CalculatorRow contents={["4", "5", "6", "*", "/"]} setter={handleClick}/>
+                        <CalculatorRow contents={["1", "2", "3", "+", "-"]} setter={handleClick}/>
+                        <CalculatorRow contents={["0", ".", "000", "Ans", "="]} setter={handleClick}/>
 
                         {/* <br/>
                         <CalculatorRow contents={["(", ")", "%", "^", "sqrt"]}/> */}
