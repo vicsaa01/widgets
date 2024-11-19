@@ -17,9 +17,13 @@ const Home = () => {
                 </div>
 
                 <div class="row w-100 mb-3">
+                    <Widget id="agenda" name="Agenda" description="A calendar to make plans for the week"/>
                     <Widget id="calculator" name="Calculator" description="For basic arithmetic operations"/>
                     <Widget id="notes" name="Notes" description="Write some text and share it on the site's bulletin board"/>
                     <Widget id="time" name="Time" description="Select a timezone and see its current time"/>
+                </div>
+
+                <div class="row w-100 mb-3">
                     <Widget id="weather" name="Weather" description="Check the weather forecast for the next few days"/>
                 </div>
             </div>

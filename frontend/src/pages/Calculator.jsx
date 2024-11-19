@@ -76,7 +76,7 @@ const Calculator = () => {
             }
             for (let i=0; i<terms.length; i++) {
                 if (terms[i] === '') {
-                    setResult('SYNTAX ERROR: You can not write more than 1 consecutive op symbol (+-*/)')
+                    setResult('SYNTAX ERROR: You can not write more than 1 consecutive operation symbol (+-*/)')
                     return
                 }
             }
@@ -103,10 +103,11 @@ const Calculator = () => {
                 // Error checking (*/) and Ans setting
                 for (let j=0; j<subterms.length; j++) {
                     if (subterms[j] === '') {
-                        setResult('SYNTAX ERROR: You can not write more than 1 consecutive op symbol (+-*/)')
+                        setResult('SYNTAX ERROR: You can not write more than 1 consecutive operation symbol (+-*/)')
                         return
                     } else if (subterms[j] === 'Ans' || subterms[j] === 'ans') {
-                        subterms[j] = result
+                        if (result === '') subterms[j] = 0
+                        else subterms[j] = result
                     }
                 }
 

@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 import Home from './pages/Home'
+import Agenda from './pages/Agenda'
 import Calculator from './pages/Calculator'
 import Notes from './pages/Notes'
 import Time from './pages/Time'
@@ -25,6 +26,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route exact path="/" element={<Home/>}/>
+        <Route path="/agenda" element={<Agenda/>}/>
         <Route path="/calculator" element={<Calculator/>}/>
         <Route path="/notes" element={<Notes/>}/>
         <Route path="/time" element={<Time/>}/>
