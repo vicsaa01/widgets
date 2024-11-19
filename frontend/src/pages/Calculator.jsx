@@ -140,7 +140,7 @@ const Calculator = () => {
             console.log('Result: ' + res)
 
             setResult(res)
-            setText('')
+            setText(res)
     }
 
     return(
@@ -152,16 +152,18 @@ const Calculator = () => {
                     <h3 class="text-dark text-center">Calculator</h3>
                 </div>
 
-                <div class="row w-100 mt-5 mb-5 justify-content-center">
+                <div class="row w-100 mt-5 justify-content-center">
                     <textarea class="w-50 form-control border border-dark" id="textarea" name="textarea" value={text}
                         onChange={handleInputChange} onKeyDown={handleEnter} onPaste={handlePaste}>
                     </textarea>
                 </div>
 
-                <div class="row w-100 mt-5 mb-5">
+                <div class="row w-100 mt-3 mb-5">
                     <div class="col-3"></div>
 
                     <div class="col-6 p-0">
+                        <p class="w-100 mb-5 text-end">Ans = {result}</p>
+
                         <CalculatorRow contents={["7", "8", "9", "DEL", "AC"]} setter={handleClick}/>
                         <CalculatorRow contents={["4", "5", "6", "*", "/"]} setter={handleClick}/>
                         <CalculatorRow contents={["1", "2", "3", "+", "-"]} setter={handleClick}/>
@@ -169,10 +171,6 @@ const Calculator = () => {
 
                         {/* <br/>
                         <CalculatorRow contents={["(", ")", "%", "^", "sqrt"]}/> */}
-
-                        <br/><br/><br/>
-                        <p>Result:</p>
-                        <p>{result}</p>
                     </div>
 
                     <div class="col-3"></div>
