@@ -14,14 +14,14 @@ const Agenda = () => {
                 </div>
 
                 <div class="row w-100 mt-5 mb-5">
-                    <Day position="0"/>
-                    <Day position="1"/>
-                    <Day position="2"/>
-                    <Day position="3"/>
-                    <Day position="4"/>
-                    <Day position="5"/>
-                    <Day position="6"/>
-                    <Day position="7"/>
+                    <Day position="0" type="agenda"/>
+                    <Day position="1" type="agenda"/>
+                    <Day position="2" type="agenda"/>
+                    <Day position="3" type="agenda"/>
+                    <Day position="4" type="agenda"/>
+                    <Day position="5" type="agenda"/>
+                    <Day position="6" type="agenda"/>
+                    <Day position="7" type="agenda"/>
                 </div>
             </div>
 

@@ -1,37 +1,39 @@
 import React from "react";
 
+import DailyAgenda from "./DailyAgenda"
+import DailyWeather from "./DailyWeather"
+
 const Day = (props) => {
 
     // Get DateTime object
 
     var date = new Date()
     date.setDate(date.getDate() + parseInt(props.position));
-    console.log(date)
 
     // Get day, date and month
 
     var day = date.getDay()
     switch(day) {
         case 0:
-            day = 'Sunday'
+            day = 'Domingo'
             break;
         case 1:
-            day = 'Monday'
+            day = 'Lunes'
             break;
         case 2:
-            day = 'Tuesday'
+            day = 'Martes'
             break;
         case 3:
-            day = 'Wednesday'
+            day = 'Miércoles'
             break;
         case 4:
-            day = 'Thursday'
+            day = 'Jueves'
             break;
         case 5:
-            day = 'Friday'
+            day = 'Viernes'
             break;
         case 6:
-            day = 'Saturday'
+            day = 'Sábado'
             break;
     }
     var dd = date.getDate()
@@ -42,6 +44,8 @@ const Day = (props) => {
             <a class="btn w-100 rounded border border-dark text-center mb-5">
                 <h6>{day}</h6>
                 <p>{dd}/{mm}</p>
+                {props.type == "agenda" && <DailyAgenda/>}
+                {props.type == "weather" && <DailyWeather pred={props.pred}/>}
             </a>
         </div>
     )
