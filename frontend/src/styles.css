@@ -5,14 +5,12 @@ nav, footer {
 }
 
 .nav-button {
-    border-style: solid;
-    border-color: white;
     color: white;
   }
 
 .nav-button:hover {
-    color: rgb(0, 111, 158);
-    background-color: white;
+    color: white;
+    font-weight: bold;
 }
 
 /* All pages: page size */
