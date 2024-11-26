@@ -14,7 +14,7 @@ const Navbar = () => {
                         <a class="p-1 btn nav-button" href="/agenda">Agenda</a>
                     </div>
 
-                    <div class="col-lg-1 col-md-2 text-center">
+                    <div class="col-lg-1 col-md-2 text-center ms-lg-3 ms-md-0 me-lg-3 me-md-0">
                         <a class="p-1 btn nav-button" href="/calculator">Calculadora</a>
                     </div>
 

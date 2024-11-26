@@ -12,25 +12,29 @@ const Weather = () => {
     const url = 'https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/46116/?api_key=' + apiKey
 
     useEffect(() => {
-        fetch(url)
-            .then((res) => {
-                return res.json()
-            })
-            .then((data) => {
-                if (data.estado == "200") {
-                    fetch(data.datos)
-                        .then((res) => {
-                            return res.json()
-                        })
-                        .then((data) => {
-                            console.log('Data fecthed:')
-                            console.log(data[0])
-                            setPred(data[0].prediccion.dia)
-                        })
-                } else {
-                    console.log('Error in first fetch: ' + data.estado)
-                }
-            })
+        try {
+            fetch(url)
+                .then((res) => {
+                    return res.json()
+                })
+                .then((data) => {
+                    if (data.estado == "200") {
+                        fetch(data.datos)
+                            .then((res) => {
+                                return res.json()
+                            })
+                            .then((data) => {
+                                console.log('Data fecthed:')
+                                console.log(data[0])
+                                setPred(data[0].prediccion.dia)
+                            })
+                    } else {
+                        console.log('Error in first fetch: ' + data.estado)
+                    }
+                })
+        } catch(e) {
+            window.location.reload(true)
+        }
     }, [url])
 
     return(

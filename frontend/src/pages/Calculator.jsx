@@ -53,7 +53,12 @@ const Calculator = () => {
             console.log('----- NEW OPERATION -----')
 
             // Get terms (+-)
-            var terms = text.split(/[+\-]/)
+            var terms = []
+            try {
+                terms = text.split(/[+\-]/)
+            } catch(e) {
+                return
+            }
 
             // Get operations (+-)
             var ops = []
