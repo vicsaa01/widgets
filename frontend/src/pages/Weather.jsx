@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 
 import Day from '../components/Day'
-import apiKey from '../params'
+import apiKey from '../connex-params-aemet'
 
 const Weather = () => {
 
