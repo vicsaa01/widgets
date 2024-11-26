@@ -53,7 +53,12 @@ const Calculator = () => {
             console.log('----- NEW OPERATION -----')
 
             // Get terms (+-)
-            var terms = text.split(/[+\-]/)
+            var terms = []
+            try {
+                terms = text.split(/[+\-]/)
+            } catch(e) {
+                return
+            }
 
             // Get operations (+-)
             var ops = []
@@ -71,12 +76,12 @@ const Calculator = () => {
             }
             let last_character = text[text.length-1]
             if (last_character === '+' || last_character === '-' || last_character === '*' || last_character === '/') {
-                setResult('SYNTAX ERROR: You can not end the operation with an operation symbol (+-*/)')
+                setResult('ERROR DE SINTAXIS: No puedes terminar la operación con un operador (+-*/)')
                 return
             }
             for (let i=0; i<terms.length; i++) {
                 if (terms[i] === '') {
-                    setResult('SYNTAX ERROR: You can not write more than 1 consecutive op symbol (+-*/)')
+                    setResult('ERROR DE SINTAXIS: No puedes escribir más de 1 operador (+-*/) consecutivo')
                     return
                 }
             }
@@ -103,10 +108,11 @@ const Calculator = () => {
                 // Error checking (*/) and Ans setting
                 for (let j=0; j<subterms.length; j++) {
                     if (subterms[j] === '') {
-                        setResult('SYNTAX ERROR: You can not write more than 1 consecutive op symbol (+-*/)')
+                        setResult('ERROR DE SINTAXIS: No puedes escribir más de 1 operador (+-*/) consecutivo')
                         return
                     } else if (subterms[j] === 'Ans' || subterms[j] === 'ans') {
-                        subterms[j] = result
+                        if (result === '') subterms[j] = 0
+                        else subterms[j] = result
                     }
                 }
 
@@ -149,7 +155,7 @@ const Calculator = () => {
 
             <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 large-page">
                 <div class="row w-100 mt-5 mb-5">
-                    <h3 class="text-dark text-center">Calculator</h3>
+                    <h3 class="text-dark text-center">Calculadora</h3>
                 </div>
 
                 <div class="row w-100 mt-5 justify-content-center">

@@ -8,7 +8,7 @@ const Notes = () => {
 
             <div class="col-lg-8 col-md-10 large-page">
                 <div class="row w-100 mt-5 mb-5">
-                    <h3 class="text-dark text-center">Notes</h3>
+                    <h3 class="text-dark text-center">Notas</h3>
                 </div>
             </div>
 
