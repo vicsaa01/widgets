@@ -41,7 +41,7 @@ const Day = (props) => {
 
     return(
         <div class="col-lg-3 col-md-6 col-sm-6 p-1">
-            <a class="btn w-100 rounded border border-dark text-center mb-5">
+            <a class="btn w-100 rounded border border-dark text-center mb-5 day-block">
                 <h6>{day}</h6>
                 <p>{dd}/{mm}</p>
                 {props.type == "agenda" && <DailyAgenda/>}

@@ -39,9 +39,9 @@ const Weather = () => {
 
     return(
         <main class="d-flex">
-            <div class="col-lg-2 col-md-1"></div>
+            <div class="col-lg-2 col-md-1 col-sm-0 col-0"></div>
 
-            <div class="col-lg-8 col-md-10 large-page">
+            <div class="col-lg-8 col-md-10 col-sm-12 col-12 ps-3">
                 <div class="row w-100 mt-5">
                     <h3 class="text-dark text-center">Tiempo</h3>
                 </div>
@@ -63,7 +63,7 @@ const Weather = () => {
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-1"></div>
+            <div class="col-lg-2 col-md-1 col-sm-0 col-0"></div>
         </main>
     )
 }

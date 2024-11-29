@@ -33,6 +33,14 @@ nav, footer {
     height: 250px;
 }
 
+/* Agenda, Weather */
+
+.day-block {
+    min-height: 300px;
+    max-height: 1000px;
+    overflow-y: auto;
+}
+
 /* Calculator */
 
 .num-button, .num-button:hover {
