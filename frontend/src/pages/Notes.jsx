@@ -65,53 +65,55 @@ const Notes = () => {
 
     return(
         <main class="d-flex">
-            <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
+            <div class="col-lg-1 col-md-0 col-sm-0 col-0"></div>
 
-            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 large-page">
+            <div class="col-lg-10 col-md-12 col-sm-12 col-12 ps-3 large-page">
                 <div class="row w-100 mt-5 mb-5">
                     <h3 class="text-dark text-center">Notas</h3>
                 </div>
 
                 <div class="row w-100 mt-3 mb-5">
-                    <div class="col-3"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-2 col-1"></div>
 
-                    <div class="col-6 p-0">
-                        {notes.map((note) => (<Note text={note.text} author={note.author} created_at={note.created_at} />))}
-                        {(notes.length == 0) && (
-                            <p class="text-dark text-center">No hay notas</p>
-                        )}
+                    <div class="col-lg-6 col-md-6 col-sm-8 col-10 p-0">
+                        <div class="overflow-auto notes-list">
+                            {notes.map((note) => (<Note text={note.text} author={note.author} created_at={note.created_at} />))}
+                            {(notes.length == 0) && (
+                                <p class="text-dark text-center">No hay notas</p>
+                            )}
+                        </div>
                     </div>
 
-                    <div class="col-3"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-2 col-1"></div>
                 </div>
 
                 <div class="row w-100 mt-3">
-                    <div class="col-3"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-2 col-1"></div>
 
-                    <div class="col-6 p-0">
+                    <div class="col-lg-6 col-md-6 col-sm-8 col-10 p-0">
                         <h5 class="text-center mt-5 mb-4">Nueva nota</h5>
                         <textarea class="w-100 form-control border border-dark mb-4" name="text" placeholder="Nota" value={text} onChange={handleInputChange}></textarea>
                     </div>
 
-                    <div class="col-3"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-2 col-1"></div>
                 </div>
 
                 <div class="row w-100 mb-5">
-                    <div class="col-3"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-2 col-1"></div>
 
-                    <div class="col-3 p-0 text-start">
-                        <input class="form-control border border-dark m-0" type="text" name="author" placeholder="Tu nombre" value={author} onChange={handleInputChange}/>
+                    <div class="col-lg-3 col-md-3 col-sm-8 col-10 p-0 text-start">
+                        <input class="form-control border border-dark m-0 mb-4" type="text" name="author" placeholder="Tu nombre" value={author} onChange={handleInputChange}/>
                     </div>
 
-                    <div class="col-3 p-0 text-end">
+                    <div class="col-lg-3 col-md-3 col-sm-10 col-11 p-0 text-end">
                         <a class="btn border border-dark m-0" onClick={addNote}>Añadir nota</a>
                     </div>
 
-                    <div class="col-3"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-2 col-1"></div>
                 </div>
             </div>
 
-            <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
+            <div class="col-lg-1 col-md-0 col-sm-0 col-0"></div>
         </main>
     )
 }

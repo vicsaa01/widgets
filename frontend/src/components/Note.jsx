@@ -11,7 +11,10 @@ const Note = (props) => {
 
     return(
         <div class="border border-dark rounded mt-3 p-3">
-            <p>{props.text}</p>
+            <div class="overflow-auto note-text">
+                <p>{props.text}</p>
+            </div>
+            
             <p class="text-end">De: {props.author} | {dd}/{mm}/{yyyy} {time}</p>
         </div>
     )

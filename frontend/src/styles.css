@@ -50,3 +50,13 @@ nav, footer {
 .eq-button, .eq-button:hover {
     background-color: lightblue;
 }
+
+/* Notes */
+
+.notes-list {
+    max-height: 500px;
+}
+
+.note-text {
+    max-height: 200px;
+}
