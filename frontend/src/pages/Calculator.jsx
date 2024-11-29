@@ -151,24 +151,22 @@ const Calculator = () => {
 
     return(
         <main class="d-flex">
-            <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
+            <div class="col-lg-1 col-md-0 col-sm-0 col-0"></div>
 
-            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 large-page">
+            <div class="col-lg-10 col-md-12 col-sm-12 col-12 large-page">
                 <div class="row w-100 mt-5 mb-5">
                     <h3 class="text-dark text-center">Calculadora</h3>
                 </div>
 
-                <div class="row w-100 mt-5 justify-content-center">
-                    <textarea class="w-50 form-control border border-dark" id="textarea" name="textarea" value={text}
-                        onChange={handleInputChange} onKeyDown={handleEnter} onPaste={handlePaste}>
-                    </textarea>
-                </div>
+                <div class="row w-100 mt-5 mb-5">
+                    <div class="col-lg-3 col-md-3 col-sm-0 col-0"></div>
 
-                <div class="row w-100 mt-3 mb-5">
-                    <div class="col-3"></div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 ps-4">
+                        <textarea class="w-100 form-control border border-dark" id="textarea" name="textarea" value={text}
+                            onChange={handleInputChange} onKeyDown={handleEnter} onPaste={handlePaste}>
+                        </textarea>
 
-                    <div class="col-6 p-0">
-                        {result != '' && <p class="w-100 mb-5 text-end">Ans = {result}</p>}
+                        {result != '' && <p class="w-100 mt-3 mb-5 text-end">Ans = {result}</p>}
                         {result == '' && <><br/><br/><br/></>}
 
                         <CalculatorRow contents={["7", "8", "9", "DEL", "AC"]} setter={handleClick}/>
@@ -180,11 +178,11 @@ const Calculator = () => {
                         <CalculatorRow contents={["(", ")", "%", "^", "sqrt"]}/> */}
                     </div>
 
-                    <div class="col-3"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-0 col-0"></div>
                 </div>
             </div>
 
-            <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
+            <div class="col-lg-1 col-md-0 col-sm-0 col-0"></div>
         </main>
     )
 }
