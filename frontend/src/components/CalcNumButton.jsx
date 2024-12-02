@@ -8,7 +8,7 @@ const CalcNumButton = (props) => {
 
     return(
         <div class="col p-0 pe-lg-2 pe-md-2 pe-sm-2 pe-0">
-            <a class="btn w-100 border border-dark num-button" onClick={(e) => props.setter(e.target.innerHTML)}>{props.number}</a>
+            <a class="btn w-100 border border-dark ps-0 pe-0 num-button" onClick={(e) => props.setter(e.target.innerHTML)}>{props.number}</a>
         </div>
     )
 }

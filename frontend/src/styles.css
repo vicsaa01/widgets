@@ -45,18 +45,22 @@ nav, footer {
 
 .num-button, .num-button:hover {
     background-color: rgb(233, 233, 233);
+    width: 20%;
 }
 
 .op-button, .op-button:hover {
     background-color: rgb(158, 158, 158);
+    width: 20%;
 }
 
 .c-button, .c-button:hover {
     background-color: rgb(88, 194, 230);
+    width: 20%;
 }
 
 .eq-button, .eq-button:hover {
     background-color: lightblue;
+    width: 20%;
 }
 
 /* Notes */

@@ -10,11 +10,11 @@ const Navbar = () => {
                         <a class="p-0" href="/"><img class="rounded" src="logo.png" alt="Website Logo" height="30"></img></a>
                     </div>
 
-                    <div class="col-lg-1 col-md-2 text-center">
+                    <div class="col-lg-1 col-md-2 text-center me-lg-2">
                         <a class="p-1 btn nav-button" href="/agenda">Agenda</a>
                     </div>
 
-                    <div class="col-lg-1 col-md-2 text-center ms-lg-3 ms-md-0 me-lg-3 me-md-0">
+                    <div class="col-lg-1 col-md-2 text-center me-lg-3">
                         <a class="p-1 btn nav-button" href="/calculator">Calculadora</a>
                     </div>
 
@@ -22,7 +22,7 @@ const Navbar = () => {
                         <a class="p-1 btn nav-button" href="/time">Hora</a>
                     </div>
 
-                    <div class="col-lg-1 col-md-2 text-center">
+                    <div class="col-lg-1 col-md-2 text-center me-lg-1">
                         <a class="p-1 btn nav-button" href="/notes">Notas</a>
                     </div>
 
