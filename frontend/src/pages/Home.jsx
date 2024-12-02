@@ -8,13 +8,13 @@ const Home = () => {
             <div class="col-lg-2 col-md-1"></div>
 
             <div class="col-lg-8 col-md-10 ps-4">
-                <div class="row w-100 mt-sm-5 mb-sm-5 mt-3 mb-3">
+                <div class="row w-100 mt-5 mb-5">
                     <h3 class="text-dark text-center">Bienvenid@ a QiWi!</h3>
                 </div>
 
-                <div class="row w-100 mb-sm-5 mb-3">
+                <div class="row w-100 mb-5">
                     <h5 class="d-none d-sm-block">Una web donde tienes acceso a las siguientes herramientas...</h5>
-                    <h5 class="d-block d-sm-none">Nuestros widgets:</h5>
+                    <h5 class="d-block d-sm-none">Herramientas que puedes probar:</h5>
                 </div>
 
                 <div class="row w-100 mb-3">
@@ -24,7 +24,7 @@ const Home = () => {
                     <Widget id="notes" name="Notas" description="Escribe algo y compártelo en el tablón de anuncios"/>
                 </div>
 
-                <div class="row w-100 mb-3">
+                <div class="row w-100 mb-5">
                     <Widget id="weather" name="Tiempo" description="Mira la predicción del tiempo para los próximos días"/>
                 </div>
             </div>
