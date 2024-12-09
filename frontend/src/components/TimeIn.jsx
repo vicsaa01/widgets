@@ -1,20 +1,31 @@
-import React from "react"
+import React, { useState } from "react"
 
 const TimeIn = (props) => {
 
     // Formatted Date object
 
-    const datetime = new Date()
+    var datetime
+    const [formattedDate, setFormattedDate] = useState()
+    const [formattedTime, setFormattedTime] = useState()
+    // const [datetime, setDatetime] = useState(new Date())
 
-    const formattedDate = new Intl.DateTimeFormat(props.locale, {
-        dateStyle: 'long',
-        timeZone: props.timezone,
-    }).format(datetime)
+    setInterval(() => {
+        datetime = new Date()
 
-    const formattedTime = new Intl.DateTimeFormat('es-ES', {
-        timeStyle: 'medium',
-        timeZone: props.timezone,
-    }).format(datetime)
+        let formattedDateTemp = new Intl.DateTimeFormat(props.locale, {
+            dateStyle: 'long',
+            timeZone: props.timezone,
+        }).format(datetime)
+
+        setFormattedDate(formattedDateTemp)
+    
+        let formattedTimeTemp = new Intl.DateTimeFormat('es-ES', {
+            timeStyle: 'medium',
+            timeZone: props.timezone,
+        }).format(datetime)
+
+        setFormattedTime(formattedTimeTemp)
+    }, 1000)
 
     return(
         <div class="row">
