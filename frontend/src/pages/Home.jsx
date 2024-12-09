@@ -25,7 +25,7 @@ const Home = () => {
                 </div>
 
                 <div class="row w-100 mb-5">
-                    <Widget id="weather" name="Tiempo" description="Mira la predicción del tiempo para los próximos días"/>
+                    <Widget id="weather-select" name="Tiempo" description="Mira la predicción del tiempo para los próximos días"/>
                 </div>
             </div>
 

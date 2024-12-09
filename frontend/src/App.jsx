@@ -14,6 +14,7 @@ import Calculator from './pages/Calculator'
 import Notes from './pages/Notes'
 import Time from './pages/Time'
 import Weather from './pages/Weather'
+import WeatherSelect from './pages/WeatherSelect'
 
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -31,6 +32,7 @@ function App() {
         <Route path="/notes" element={<Notes/>}/>
         <Route path="/time" element={<Time/>}/>
         <Route path="/weather" element={<Weather/>}/>
+        <Route path="/weather-select" element={<WeatherSelect/>}/>
       </Routes>
       <Footer/>
     </Router>

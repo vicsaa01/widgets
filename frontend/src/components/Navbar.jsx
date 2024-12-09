@@ -51,8 +51,8 @@ const Navbar = () => {
                     </div>
 
                     <div class="col-lg-1 col-md-2 text-center">
-                        <a class="p-1 btn nav-button d-none d-md-block" href="/weather">Tiempo</a>
-                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/weather" onClick={toggleMenu}>Tiempo</a>
+                        <a class="p-1 btn nav-button d-none d-md-block" href="/weather-select">Tiempo</a>
+                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/weather-select" onClick={toggleMenu}>Tiempo</a>
                     </div>
                 </div>
             </div>

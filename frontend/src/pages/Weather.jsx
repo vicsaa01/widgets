@@ -6,10 +6,16 @@ import apiKey from '../connex-params-aemet'
 
 const Weather = () => {
 
+    // Get town ID
+
+    const params = new URLSearchParams(window.location.search)
+    const municipio = params.get("municipio")
+    const [townName, setTownName] = useState("")
+
     // Get daily weather prediction as JSON object from AEMET API
 
     const [pred, setPred] = useState([])
-    const url = 'https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/46116/?api_key=' + apiKey
+    const url = 'https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/' + municipio + '/?api_key=' + apiKey
 
     useEffect(() => {
         try {
@@ -27,6 +33,7 @@ const Weather = () => {
                                 console.log('Data fecthed:')
                                 console.log(data[0])
                                 setPred(data[0].prediccion.dia)
+                                setTownName(data[0].nombre)
                             })
                     } else {
                         console.log('Error in first fetch: ' + data.estado)
@@ -47,8 +54,7 @@ const Weather = () => {
                 </div>
 
                 <div class="row w-100 mt-3 mb-5">
-                    <p class="text-dark text-center">Fuente: AEMET</p>
-                    <p class="text-dark text-center"></p>
+                    <p class="text-dark text-center">Localidad: {townName} | Fuente: AEMET</p>
                 </div>
 
                 <div class="row w-100 mt-5 mb-5">
