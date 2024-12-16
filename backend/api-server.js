@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
+require('dotenv').config()
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -11,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Connect to MongoDB
 
-mongoose.connect('mongodb+srv://victorsaakes:18irRH96LDa8mJMr@qiwi.pw6cz.mongodb.net/', {
+mongoose.connect('mongodb+srv://' + process.env.MONGO_USER + ':' + process.env.MONGO_PASSWORD + '@' + process.env.MONGO_URL + '/', {
     dbName: 'public',
     useNewUrlParser: true,
     useUnifiedTopology: true
