@@ -49,7 +49,7 @@ const WeatherSelect = () => {
     }
 
     return(
-        <main class="d-flex">
+        <main class="d-flex large-page">
             <div class="col-lg-2 col-md-1 col-sm-0 col-0"></div>
 
             <div class="col-lg-8 col-md-10 col-sm-12 col-12 ps-4">
@@ -90,10 +90,6 @@ const WeatherSelect = () => {
                         </div>
                     </div>
                 </div>
-
-                <br/><br/><br/><br/><br/><br/>
-                <br/><br/><br/><br/><br/><br/>
-                <br/><br/><br/><br/><br/><br/>
             </div>
 
             <div class="col-lg-2 col-md-1 col-sm-0 col-0"></div>

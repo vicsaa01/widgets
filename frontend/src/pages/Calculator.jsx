@@ -150,10 +150,10 @@ const Calculator = () => {
     }
 
     return(
-        <main class="d-flex">
+        <main class="d-flex large-page">
             <div class="col-lg-1 col-md-0 col-sm-0 col-0"></div>
 
-            <div class="col-lg-10 col-md-12 col-sm-12 col-12 ps-2 large-page">
+            <div class="col-lg-10 col-md-12 col-sm-12 col-12 ps-">
                 <div class="row w-100 mt-5 mb-5">
                     <h3 class="text-dark text-center">Calculadora</h3>
                 </div>

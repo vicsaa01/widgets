@@ -30,10 +30,12 @@ const Navbar = () => {
                         <a class="m-0 p-0 btn d-block d-md-none" onClick={toggleMenu}><img id="menuIcon" src="menu-icon.png" alt="menu icon" height="30"></img></a>
                     </div>
 
+                    {/*
                     <div class="col-lg-1 col-md-2 text-center me-lg-2">
                         <a class="p-1 btn nav-button d-none d-md-block" href="/agenda">Agenda</a>
                         <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/agenda" onClick={toggleMenu}>Agenda</a>
                     </div>
+                    */}
 
                     <div class="col-lg-1 col-md-2 text-center me-lg-3">
                         <a class="p-1 btn nav-button d-none d-md-block" href="/calculator">Calculadora</a>
