@@ -63,6 +63,12 @@ nav, footer {
     width: 20%;
 }
 
+.warning {
+    border-color: rgb(167, 128, 2);
+    background-color: rgb(255, 242, 198);
+    color:rgb(167, 128, 2);
+}
+
 /* Notes */
 
 .notes-list {

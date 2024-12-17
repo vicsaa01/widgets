@@ -8,6 +8,7 @@ const Calculator = () => {
 
     var [text, setText] = useState('')
     var [result, setResult] = useState('')
+    var [warning, setWarning] = useState('')
 
     // Prevent pasting
 
@@ -25,7 +26,15 @@ const Calculator = () => {
     const handleEnter = (e) => {
         if (e.keyCode === 13) {
             e.preventDefault()
-            calculate()
+            if (text.includes('(') || text.includes(')') || text.includes('[') || text.includes(']') || text.includes('%') || text.includes('!') || text.includes('^')) {
+                setWarning('Sorry, the current version does not allow the following symbols: (), [], %, !, ^')
+            } else {
+                calculate()
+                setWarning('')
+            }
+        } else if ((e.keyCode >= 97 && e.keyCode <= 122) || (e.keyCode >= 65 && e.keyCode <= 90)) {
+            e.preventDefault()
+            setWarning('Sorry, this calculator does not allow letters')
         }
     }
 
@@ -38,9 +47,11 @@ const Calculator = () => {
                 break;
             case 'AC':
                 setText('')
+                setWarning('')
                 break;
             case '=':
                 calculate()
+                setWarning('')
                 break;
             default:
                 setText((prevText) => (prevText + x))
@@ -176,6 +187,16 @@ const Calculator = () => {
 
                         {/* <br/>
                         <CalculatorRow contents={["(", ")", "%", "^", "sqrt"]}/> */}
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-0 col-0"></div>
+                </div>
+
+                <div class="row w-100 mt-5 mb-5">
+                    <div class="col-lg-3 col-md-3 col-sm-0 col-0"></div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 ps-4">
+                        {(warning != '') && <p class="rounded border border-warning warning p-3">{warning}</p>}
                     </div>
 
                     <div class="col-lg-3 col-md-3 col-sm-0 col-0"></div>
