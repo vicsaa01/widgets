@@ -15,7 +15,7 @@ const Note = (props) => {
                 <p>{props.text}</p>
             </div>
             
-            <p class="text-end">De: {props.author} | {dd}/{mm}/{yyyy} {time}</p>
+            <p class="text-end">by {props.author} | {dd}/{mm}/{yyyy} {time}</p>
         </div>
     )
 }

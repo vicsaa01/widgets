@@ -38,23 +38,23 @@ const Navbar = () => {
                     */}
 
                     <div class="col-lg-1 col-md-2 text-center me-lg-3">
-                        <a class="p-1 btn nav-button d-none d-md-block" href="/calculator">Calculadora</a>
-                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/calculator" onClick={toggleMenu}>Calculadora</a>
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 text-center">
-                        <a class="p-1 btn nav-button d-none d-md-block" href="/time">Hora</a>
-                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/time" onClick={toggleMenu}>Hora</a>
+                        <a class="p-1 btn nav-button d-none d-md-block" href="/calculator">Calculator</a>
+                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/calculator" onClick={toggleMenu}>Calculator</a>
                     </div>
 
                     <div class="col-lg-1 col-md-2 text-center me-lg-1">
-                        <a class="p-1 btn nav-button d-none d-md-block" href="/notes">Notas</a>
-                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/notes" onClick={toggleMenu}>Notas</a>
+                        <a class="p-1 btn nav-button d-none d-md-block" href="/notes">Notes</a>
+                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/notes" onClick={toggleMenu}>Notes</a>
+                    </div>
+
+                    <div class="col-lg-1 col-md-2 text-center me-lg-1">
+                        <a class="p-1 btn nav-button d-none d-md-block" href="/time">Time</a>
+                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/time" onClick={toggleMenu}>Time</a>
                     </div>
 
                     <div class="col-lg-1 col-md-2 text-center">
-                        <a class="p-1 btn nav-button d-none d-md-block" href="/weather-select">Tiempo</a>
-                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/weather-select" onClick={toggleMenu}>Tiempo</a>
+                        <a class="p-1 btn nav-button d-none d-md-block" href="/weather-select">Weather</a>
+                        <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/weather-select" onClick={toggleMenu}>Weather</a>
                     </div>
                 </div>
             </div>

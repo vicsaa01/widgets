@@ -54,7 +54,11 @@ const WeatherSelect = () => {
 
             <div class="col-lg-8 col-md-10 col-sm-12 col-12 ps-4">
                 <div class="row w-100 mt-5">
-                    <h3 class="text-dark text-center">Tiempo</h3>
+                    <h3 class="text-dark text-center">Weather</h3>
+                </div>
+
+                <div class="row w-100 mt-3 mb-5">
+                    <p class="text-dark text-center">The weather widget is currently only available in Spain</p>
                 </div>
 
                 <div class="row w-100">
