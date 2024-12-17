@@ -1,5 +1,5 @@
 // My API
 
-const apiRoute = 'http://localhost:8000'
+const apiRoute = 'https://api-qiwi.onrender.com'
 
 export default apiRoute
