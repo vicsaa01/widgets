@@ -42,10 +42,10 @@ const Navbar = () => {
                         <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/calculator" onClick={toggleMenu}>Calculator</a>
                     </div>
 
-                    <div class="col-lg-1 col-md-2 text-center me-lg-1">
+                    {/*<div class="col-lg-1 col-md-2 text-center me-lg-1">
                         <a class="p-1 btn nav-button d-none d-md-block" href="/notes">Notes</a>
                         <a class="p-1 btn nav-button menu-button" style={{display: "none"}} href="/notes" onClick={toggleMenu}>Notes</a>
-                    </div>
+                    </div>*/}
 
                     <div class="col-lg-1 col-md-2 text-center me-lg-1">
                         <a class="p-1 btn nav-button d-none d-md-block" href="/time">Time</a>

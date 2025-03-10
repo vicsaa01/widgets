@@ -19,7 +19,6 @@ const Home = () => {
 
                 <div class="row w-100 mb-3">
                     <Widget id="calculator" name="Calculator" description="For basic arithmetic"/>
-                    <Widget id="notes" name="Notes" description="Write something and share it on the bulletin board"/>
                     <Widget id="time" name="Time" description="See the current time around the world"/>
                     <Widget id="weather-select" name="Weather" description="Check the weather forecast for the next few days"/>
                 </div>
